@@ -3,18 +3,14 @@
     padding-left: 10px;
     display: inline-flex;
     gap: 50px;
+    position: relative;
 
-    img {
-        margin: 20px 0;
-        width: 100px;
-        height: 100px;
-    }
 }
 
-.about {
-    border: 2px rgb(68, 60, 171) solid;
-    padding: 10px;
-    border-radius: 10px;
+.content img {
+    margin: 20px 0;
+    width: 100px;
+    height: 100px;
 }
 
 .content span {
@@ -26,9 +22,41 @@
     border-top: 10px transparent solid;
     border-bottom: 10px transparent solid;
     left: 130px;
-    bottom: 515px
+    top: 90px;
 }
+
+.about {
+    border: 2px rgb(68, 60, 171) solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 
 footer {
     margin-top: 97px;
+}
+
+@media (max-width: 750px) {
+    .content {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 30px;
+        gap: 20px;
+    }
+
+    .content img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .content span {
+        top: 265px;
+        left: 345px;
+        border-left: 10px transparent solid;
+        border-top: 10px rgb(68, 60, 171) solid;
+
+    }
 }
