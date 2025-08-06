@@ -30,57 +30,59 @@ body.dark h2 {
     border-radius: 10px;
     padding: 10px;
     background-color: #3d484f20;
-    /* align-items: stretch; */
+}
 
-    h3 {
-        text-align: center;
-        margin-bottom: 10px;
-    }
+.project h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
 
-    img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16/9;
-        border-radius: 10px;
-        box-shadow: 0 0 8px rgb(0, 0, 0);
-        filter: brightness(90%);
-        transition: 0.5s ease;
+.project img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgb(0, 0, 0);
+    filter: brightness(90%);
+    transition: 0.5s ease;
 
-        &:hover {
-            transform: scale(1.01);
-        }
-    }
+}
 
-    p {
-        text-align: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+.project img:hover {
+    transform: scale(1.01);
+}
 
-    hr {
-        margin: 5px auto;
-        width: 50%;
-        height: 3px;
-    }
+.project p {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
-    a {
-        display: inline-flex;
-        margin: 10px 10px 0 10px;
-        text-decoration: none;
-        color: rgb(35, 37, 63);
-        transition: 0.5s ease;
+.project hr {
+    margin: 0 auto;
+    width: 50%;
+    height: 3px;
+}
 
-        &:hover {
-            color: #282828;
-            font-size: 20px;
-            text-decoration: underline;
-        }
-    }
+.project a {
+    display: inline-flex;
+    margin: 10px 10px 0 10px;
+    text-decoration: none;
+    color: rgb(35, 37, 63);
+    transition: 0.5s ease;
+
+}
+
+.project a:hover {
+    color: #282828;
+    font-size: 20px;
+    text-decoration: underline;
 }
 
 .project .link-card {
-    display: grid;
-    grid-template-columns: repeat(2, 85%);
+    display: flex;
+    gap: 65%;
+    margin-left: 10px;
 }
 
 body.dark .project a {
