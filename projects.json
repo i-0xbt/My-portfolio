@@ -1,0 +1,13 @@
+[
+    {
+        "title": "portfolio website",
+        "description": "A portfolio website withe some animations",
+        "image": "images/gess.png"
+    },
+    {
+        "title": "Gess the word game",
+        "description": "A game in which you have to gess the word with 6 tries",
+        "image": "images/gess.png"
+    }
+
+]
