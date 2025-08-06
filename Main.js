@@ -28,13 +28,14 @@ menuToggle.addEventListener("click", () => {
 fetch('projects.json')
     .then(response => response.json())
     .then(data => {
-        const contenar = document.querySelector('.content-pro');
+        const contenar = document.querySelector('.projects');
 
         data.forEach(project => {
             const div = document.createElement("div")
             div.classList.add("project")
             div.innerHTML = `<h3>${project.title}</h3><img src = "${project.image}" alt = "${project.title}"> <hr>
-                             <p>${project.description}</p> <a href = "#" target = "_blank"> go to the project</a>`;
+                             <p>${project.description}</p> <div class = "link-card"> <a href = "${project.link}" target = "_blank"> Live server</a> 
+                             <a href = "${project.github}" target = "_blank"> Github </a> </div>`;
             contenar.appendChild(div)
         });
     })

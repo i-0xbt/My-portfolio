@@ -1,13 +1,16 @@
 [
     {
         "title": "portfolio website",
-        "description": "A portfolio website withe some animations",
-        "image": "images/gess.png"
+        "description": "A personal portfolio website to showcase projects and skills, built with HTML5, CSS3, and JavaScript. The site features a fully responsive design using Flexbox and Grid, and includes a dark mode feature that persists the user's choice. Project data is loaded dynamically using JavaScript to fetch from a JSON file.",
+        "image": "images/project-1.png",
+        "link": "#",
+        "github": "#"
     },
     {
         "title": "Gess the word game",
-        "description": "A game in which you have to gess the word with 6 tries",
-        "image": "images/gess.png"
+        "description": "An interactive web game developed with JavaScript to handle the core game logic. Players attempt to guess a hidden word within a limited number of tries. This project showcases JavaScript DOM manipulation skills for updating the UI, handling user input, and managing the game state.",
+        "image": "images/gess.png",
+        "link": "#",
+        "github": "#"
     }
-
 ]
