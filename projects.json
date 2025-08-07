@@ -10,7 +10,7 @@
         "title": "Gess the word game",
         "description": "An interactive web game developed with JavaScript to handle the core game logic. Players attempt to guess a hidden word within a limited number of tries. This project showcases JavaScript DOM manipulation skills for updating the UI, handling user input, and managing the game state.",
         "image": "images/gess.png",
-        "link": "#",
-        "github": "#"
+        "link": "https://i-0xbt.github.io/Projects/",
+        "github": "https://github.com/i-0xbt/Projects"
     }
 ]
