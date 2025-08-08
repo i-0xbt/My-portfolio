@@ -25,20 +25,24 @@ menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
-fetch('projects.json')
-    .then(response => response.json())
-    .then(data => {
-        const contenar = document.querySelector('.projects');
+const contenar = document.querySelector('.projects');
 
-        data.forEach(project => {
-            const div = document.createElement("div")
-            div.classList.add("project")
-            div.innerHTML = `<h3>${project.title}</h3><img src = "${project.image}" alt = "${project.title}">
-                             <p>${project.description}</p> <hr> <div class = "link-card"> <a href = "${project.link}" target = "_blank"> Go live</a> 
-                             <a href = "${project.github}" target = "_blank"> Github </a> </div>`;
-            contenar.appendChild(div)
+if (contenar) {
+
+    fetch('projects.json')
+        .then(response => response.json())
+        .then(data => {
+
+            data.forEach(project => {
+                const div = document.createElement("div")
+                div.classList.add("project")
+                div.innerHTML = `<h3>${project.title}</h3><img src = "${project.image}" alt = "${project.title}">
+                                 <p>${project.description}</p> <hr> <div class = "link-card"> <a href = "${project.link}" target = "_blank"> Go live</a> 
+                                 <a href = "${project.github}" target = "_blank"> Github </a> </div>`;
+                contenar.appendChild(div)
+            });
+        })
+        .catch(error => {
+            console.log('Error in loading: ', error);
         });
-    })
-    .catch(error => {
-        console.log('Error in loading: ', error);
-    });
+};
