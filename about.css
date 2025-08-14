@@ -11,6 +11,7 @@
     margin: 20px 0;
     width: 100px;
     height: 100px;
+    border-radius: 50%;
 }
 
 .content span {
@@ -29,6 +30,10 @@
     border: 2px rgb(68, 60, 171) solid;
     padding: 10px;
     border-radius: 10px;
+}
+
+.about h2  {
+    text-align: center;
 }
 
 

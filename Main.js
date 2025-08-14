@@ -18,13 +18,6 @@ dark.addEventListener("click", () => {
     }
 });
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".links");
-
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
 const contenar = document.querySelector('.projects');
 
 if (contenar) {
@@ -46,3 +39,60 @@ if (contenar) {
             console.log('Error in loading: ', error);
         });
 };
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+const index = document.querySelector(".index")
+if (index) {
+
+    const anim1 = document.querySelector(".anim");
+    let text1 = anim1.textContent;
+    anim1.textContent = "";
+
+    text1.split("").forEach((letter, index) => {
+        setTimeout(() => {
+            anim1.textContent += letter;
+        }, 100 * index);
+
+    })
+
+    const anim2 = document.querySelector(".anim2");
+    let text2 = anim2.textContent;
+    anim2.textContent = "";
+    anim2.style.opacity = 0;
+
+    setTimeout(() => {
+        anim2.style.transition = "opacity 0.5s ease"
+        anim2.style.opacity = 1;
+
+        text2.split("").forEach((letter, index) => {
+            setTimeout(() => {
+                anim2.textContent += letter;
+            }, 100 * index);
+
+        })
+    }, text1.length * 100);
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".links a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            const destination = link.href;
+            document.body.classList.add('fade-out')
+
+            setTimeout(() => {
+                window.location.href = destination;
+            }, 250);
+        });
+    });
+});
+
